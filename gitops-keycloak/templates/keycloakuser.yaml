@@ -1,0 +1,17 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakUser
+metadata:
+  name: argocd-user
+  labels:
+    app: sso
+spec:
+  realmSelector:
+    matchLabels:
+      app: sso
+  user:
+    clientRoles:
+      account:
+        - "manage-account"
+      realm-management:
+        - "manage-users"
+    {{- toYaml .Values.keyCloakUser | nindent 2 }}

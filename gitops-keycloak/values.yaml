@@ -1,0 +1,27 @@
+keyCloakCluster:
+  instances: 1
+  externalAccess: True
+
+keyCloakRealm:
+  id: "argocd"
+  realm: "argocd"
+  enabled: True
+  displayName: "ArgoCD Realm"
+
+keyCloakClient:
+  clientId: argocd
+  rootUrl:
+  secret:
+
+keyCloakUser:
+  credentials: 
+    - temporary: true
+      type: Opaque
+      value: argocd
+  email: user@example.com
+  enabled: true
+  firstName: John
+  lastName: Doe
+  username: argocd
+  realmRoles: 
+    - Admin

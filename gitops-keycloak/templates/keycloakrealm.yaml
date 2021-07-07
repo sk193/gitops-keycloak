@@ -1,0 +1,12 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakRealm
+metadata:
+  name: argocd
+  labels:
+    app: sso
+spec:
+  realm:
+    {{- toYaml .Values.keyCloakRealm | nindent 2 }}
+  instanceSelector:
+    matchLabels:
+      app: sso

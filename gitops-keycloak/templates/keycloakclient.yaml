@@ -1,0 +1,18 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakClient
+metadata:
+  name: argocd-client
+  labels:
+    app: sso
+spec:
+  realmSelector:
+     matchLabels:
+      app: <matching labels for KeycloakRealm custom resource>
+  client:
+    clientId: {{.Values.keyCloakClient.clientId}}
+    rootUrl: {{.Values.keyCloakClient.rootUrl}}
+    secret: {{.Values.keyCloakClient.secret}}
+    publicClient: false
+    standardFlowEnabled: true
+    protocol: openid-connect
+    baseUrl: /applications

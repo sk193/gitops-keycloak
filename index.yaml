@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  gitops-keycloak:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-07-07T11:49:10.781282-05:00"
+    description: A Helm chart for Kubernetes
+    digest: a703dbdca0bcbe73d68aa056f4846f4b96c2b035d3b4f2033f574f54c151bfca
+    name: gitops-keycloak
+    type: application
+    urls:
+    - https://sk193.github.io/gitops-keycloak/gitops-keycloak-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-07-07T11:49:10.778865-05:00"
